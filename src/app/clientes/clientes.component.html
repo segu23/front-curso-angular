@@ -13,6 +13,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Foto</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
@@ -24,6 +25,10 @@
             <tbody>
                 <tr *ngFor="let cliente of clientes">
                     <td>{{cliente.id}}</td>
+                    <td>
+                        <img class="img-thumbnail rounded" width="64px" 
+                        src="{{'http://localhost:8080/api/uploads/pp/' + cliente.id}}" />
+                    </td>
                     <td>{{cliente.nombre}}</td>
                     <td>{{cliente.apellido}}</td>
                     <td>{{cliente.email}}</td>
